@@ -146,3 +146,105 @@ The last step is paint, which takes in the final render tree and renders the pix
 First, the browser combines the DOM and CSSOM into a "render tree," which captures all the visible DOM content on the page and all the CSSOM style information for each node.
 
 ![alt text](https://web-dev.imgix.net/image/C47gYyWYVMMhDmtYSLOWazuyePF2/b6Z2Gu6UD1x1imOu1tJV.png?auto=format&w=845)
+
+To construct the render tree, the browser roughly does the following:
+
+Starting at the root of the DOM tree, traverse each visible node.
+
+Some nodes are not visible (for example, script tags, meta tags, and so on), and are omitted since they are not reflected in the rendered output.
+Some nodes are hidden via CSS and are also omitted from the render tree; for example, the span node---in the example above---is missing from the render tree because we have an explicit rule that sets the "display: none" property on it.
+For each visible node, find the appropriate matching CSSOM rules and apply them.
+
+Emit visible nodes with content and their computed styles.
+
+The final output is a render tree that contains both the content and style information of all the visible content on the screen. With the render tree in place, we can proceed to the "layout" stage.
+
+Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the viewport of the device---that's the "layout" stage, also known as "reflow."
+
+# Order of script processing
+
+Executable objects go through four execution stages. The second one is the generation stage. Scripts are generated during this stage. The time at which the script is generated depends on object attributes. The order in which scripts are processed in an object depends on which Process pages the scripts are on.
+
+Script processing includes the following:
+
+Execution Stages
+Time of Processing
+Order of Processing
+Processing In Scripts
+Execution Stages
+
+To configure the object attributes correctly so that the script elements behave as you expect, you must understand the stages of execution that a task goes through. The task is activated, generated, processed (that is, executed on the target computer) and finally completed.
+
+The following topics describe the execution stages and the individual steps that take place in each stage. Read them before starting with the Automation Engine scripting language:
+
+Execution Stages
+
+Activation
+
+Generation
+
+Processing
+
+Completion
+
+Time of Processing
+
+The time at which the script is generated depends on the Generate Task at attribute that you define on the object Attributes page. You have two options:
+
+Generate Task at: Activation time
+
+The script is generated at the beginning of the generation stage.
+
+Generate Task at: Runtime
+
+The script is generated much later in the generation stage
+
+Example
+
+The following script uses a function to set the value of a variable to the current date and time:
+
+:SET &CURRENTTIME# = SYS_TIME()
+
+The actual date and time that the script returns depend on the point in time at which the task is generated. Assume that you have two tasks that are configured differently:
+
+Task A is configured to be generated at activation time. The value of the variable is set immediately upon activation.
+
+Task B is configured to be generated at runtime. The task is in a workflow that has several preceding tasks before Task B. Task B is generated when the preceding tasks have finished. The value of the variable is set to the actual time when the task is generated.
+
+For more information about object attributes that concern generation, see Attributes Page. Read also Generating at Activation or at Runtime, where the implications of choosing either option are described in detail.
+
+Important! If you exit the AWI after starting an object that is configured to be generated at activation, script generation may not have finished. If the script includes elements that require action, such as a :READ statement, you may not get the desired results.
+
+Order of Processing
+
+Depending on the type of object, the task may have more than one Process page on which you can write scripts. The scripts in the Process pages are processed in the following order:
+
+Pre-Process page and Process page
+Child Post Process page
+Post Process page
+For more information, see Process Pages.
+
+Processing In Scripts
+
+The Automation Engine processes scripts line by line. The results of executed script elements (such as the value of a variable that has been set) are regularly written to the AE database. This process is referred to as a commit. Other scripts can only access these new or modified values after the values have been committed.
+
+When scripts run for longer times, the Automation Engine automatically makes a commit every 5 seconds. In addition, some script elements that require processes to complete also result in commits.
+
+Examples
+
+Some script elements start or stop tasks, and wait for the RunID of the task to be returned, therefore resulting in a commit. The following functions are examples of such script elements:
+
+ACTIVATE_UC_OBJECT
+CANCEL_UC_OBJECT
+RESTART_UC_OBJECT
+Some script statements require user interaction. The system waits for the user to react, so script statements such as the following also result in a commit:
+
+:BEGINREAD... :ENDREAD
+:READ
+The :WAIT script statement instructs the system to wait for a specific length of time, and also results in a commit.
+
+Tip: Use :WAIT to enforce a commit.
+
+# Layout and painting how browser works
+
+![alt text](https://www.freecodecamp.org/news/content/images/2019/06/dns_resolve.png)
