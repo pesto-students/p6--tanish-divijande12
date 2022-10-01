@@ -248,3 +248,7 @@ Tip: Use :WAIT to enforce a commit.
 # Layout and painting how browser works
 
 ![alt text](https://www.freecodecamp.org/news/content/images/2019/06/dns_resolve.png)
+
+# Diagram when user hits the url in the browser
+
+![alt text](https://www.knowbe4.com/hubfs/How-The-Web-Works.jfif)
