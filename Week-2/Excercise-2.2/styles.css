@@ -1,0 +1,184 @@
+h1 {
+    color: red;
+    font-size: 48px;
+    position: relative;
+    left: 650px;
+    top: 200px;
+}
+
+.box-wrapper {
+    position: absolute;
+    top: 170px;
+    left: 600px;
+}
+
+.one {
+    display: flex;
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: redreturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.box-wrapper:hover .red {
+    animation-name: redcard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.yellow {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation-name: yellowreturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.box-wrapper:hover .yellow {
+    animation-name: yellowcard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.two {
+    display: flex;
+}
+
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: bluereturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+.box-wrapper:hover .blue {
+    animation-name: bluecard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+
+
+.green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: greenreturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+.box-wrapper:hover .green {
+    animation-name: greencard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+
+@keyframes redcard {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(90deg);
+    }
+
+}
+@keyframes redreturn {
+    0% {
+        transform: translateX(-100px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+}
+
+@keyframes yellowcard {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(100px) rotate(0deg);
+    }
+}
+@keyframes yellowreturn {
+    0% {
+        transform: translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+
+@keyframes bluecard {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(0deg);
+    }
+}
+@keyframes bluereturn {
+    0% {
+        transform: translateX(-100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+
+@keyframes greencard {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(100px) rotate(0deg);
+    }
+}
+@keyframes greenreturn {
+    0% {
+        transform: translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
