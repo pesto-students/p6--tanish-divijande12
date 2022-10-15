@@ -1,0 +1,203 @@
+h1 {
+    color: red;
+    font-size: 48px;
+    position: relative;
+    left: 650px;
+    top: 200px;
+}
+
+.box-wrapper {
+    position: absolute;
+    top: 170px;
+    left: 600px;
+}
+
+/* flexbox of upper boxes */
+.one {
+    display: flex;
+}
+
+/* animation of red box after hover */
+.red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: redreturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation of red box on hover */
+.box-wrapper:hover .red {
+    animation-name: redcard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation of yellow box after hover */
+.yellow {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation-name: yellowreturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation of yellow box on hover */
+.box-wrapper:hover .yellow {
+    animation-name: yellowcard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* flexbox of lower boxes */
+.two {
+    display: flex;
+}
+
+/* animation of blue box after hover */
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: bluereturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation of blue box on hover */
+.box-wrapper:hover .blue {
+    animation-name: bluecard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation of green box after hover */
+.green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: greenreturn;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation of green box on hover */
+.box-wrapper:hover .green {
+    animation-name: greencard;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+/* animation for red box */
+@keyframes redcard {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(90deg);
+    }
+
+}
+/* animation for red box to return to original place */
+@keyframes redreturn {
+    0% {
+        transform: translateX(-100px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+}
+/* animation for yellow box */
+@keyframes yellowcard {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(100px) rotate(0deg);
+    }
+}
+
+/* animation for yellow box to return to original place */
+@keyframes yellowreturn {
+    0% {
+        transform: translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+
+/* animation for blue box */
+@keyframes bluecard {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(0deg);
+    }
+}
+
+/* animation for blue box to return to original place */
+@keyframes bluereturn {
+    0% {
+        transform: translateX(-100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+
+/* animation for green box */
+@keyframes greencard {
+    0% {
+        transform: translateX(0px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(100px) rotate(0deg);
+    }
+}
+
+/* animation for green box to return to original place */
+@keyframes greenreturn {
+    0% {
+        transform: translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0px) rotate(90deg);
+    }
+}
