@@ -1,0 +1,85 @@
+.body{
+  margin: 0 auto;
+}
+
+.wrapper {
+  text-align: center;
+}
+.navbar > div.container-fluid{
+  justify-content: center;
+}
+.taskbg {
+  margin: 0 auto;
+    width: 600px;
+}
+.task{
+  background-color: #e3e3e3;
+  margin-bottom: 2%;
+  padding: 2%;
+  border-radius: 6px;
+  text-align: left;
+  font-size: px;
+  position: relative;
+  color: #000;
+}
+.task .done .taskText{
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+.task div{
+  display: flex;
+  text-align: center;
+}
+.taskNumber{
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.iconsWrapper{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+.iconsWrapper > span {
+  margin-right: 10px;
+}
+.inprogress {
+  color: #0d6efd;
+}
+.completed{
+  color: #008000;
+}
+.editTask {
+  color: green;
+}
+.hidden{
+  display: none;
+}
+.deleteTask {
+  color: red;
+}
+
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    margin: 2% 0 2% 0;
+}
+
+.inputContainer input{
+  width: 33%;
+  margin-right: 1%;
+}
+.buttons{
+  margin: 0 0 2% 0;
+}
