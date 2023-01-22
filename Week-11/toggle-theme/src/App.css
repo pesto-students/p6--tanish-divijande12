@@ -1,0 +1,11 @@
+.app.light {
+  background-color: white;
+  height: 100vh;
+  color: black;
+}
+
+.app.dark {
+  background-color: black;
+  color: white;
+  height: 100vh;
+}
