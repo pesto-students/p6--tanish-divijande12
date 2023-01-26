@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.header h1 {
+  font-size: 46px;
+  font-family: sans-serif;
+}
+
+.para-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.para-container p {
+  width: 450px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.third-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+}
+.third-wrapper .img-wrapper {
+  width: 450px;
+}
+.third-wrapper .img-wrapper img {
+  width: 450px;
+  height: 450px;
+}
+.third-wrapper .para2-container {
+  width: 450px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.third-wrapper .para2-container .para-one h1 {
+  font-size: 24px;
+  font-family: sans-serif;
+}
+.third-wrapper .para2-container .para-one p {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.form {
+  margin: 20px 0px 10px 140px;
+}
+.form .value {
+  margin-bottom: 20px;
+}
+.form .underline {
+  text-decoration: underline;
+  color: rgb(255, 81, 110);
+}
+.form span {
+  font-size: 14px;
+  font-family: sans-serif;
+}/*# sourceMappingURL=styles.css.map */
